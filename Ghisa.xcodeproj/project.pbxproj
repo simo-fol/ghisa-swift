@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05ADB17C265D93AAC55118AB /* WorkbookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBD541F1C3649B82932EF9 /* WorkbookParser.swift */; };
+		10DE6B8F9D6F793720173AF0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D7240EF7FF40E3A84173F /* AppState.swift */; };
+		168EED4344E760B3F3ED296B /* XmlNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB393DDBE8301740CF3B2245 /* XmlNode.swift */; };
+		1B1C1C0FFAD3D38A031F946B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF030FAA12841DEEAAE5AB /* HomeView.swift */; };
+		27580D1D8292EE8AEA83D964 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B180C19033BE05BBFC87F077 /* RootView.swift */; };
+		28A3B8C73D0193CC7B9AB06F /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146DA3D6EB57F64384DC61F /* Zip.swift */; };
+		2D88766DB1298B5CA3F580E4 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A656FAB21A5F7C89E146C3 /* PreviewData.swift */; };
+		3F403B5F0E92A1FABE12658B /* XlsxPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B84F26602F7865E13FED70 /* XlsxPackage.swift */; };
+		4CB5186B505A04551144DCDE /* SetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAE8B78B3148AE92CE38496 /* SetValues.swift */; };
+		4F751780E10C7F41B990EAC0 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C008A21124DB232ECDB04E /* WorkoutModel.swift */; };
+		66B419DBEFF3949AE8E17EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E6113CFF7CABD24B131EB0 /* Assets.xcassets */; };
+		67A7C268A09520FCD050C3A4 /* RestTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98565EA878F9CE92766EE713 /* RestTimer.swift */; };
+		805B5C6C2FDF7ED4397FFA44 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F31C965D8E8AEA5939A148 /* AppModel.swift */; };
+		87DC17951CCA4536E5AE8DC4 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104573447F98E7DD5FCCF2EE /* Exercise.swift */; };
+		98BF33A6AAB652DFBA8B90E6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B03D7829A4B65DB5FA16A /* Theme.swift */; };
+		A8CA34FE07CB472F0A14B84B /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865A1C2D34659CF3C6E734A /* Platform.swift */; };
+		A8DF2AA45D7FF8AEC322B6C9 /* GhisaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712E9B2FA993D6D287380732 /* GhisaApp.swift */; };
+		B2C191BF01727A89C537C878 /* SessionPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760382A57C6574A421490EF /* SessionPlanner.swift */; };
+		B2F6DB59380C2775AA5BC00C /* DoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404BC770776AA0C6FE1BD40 /* DoneView.swift */; };
+		D403AC2052FD192E22CCFF57 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE2A21E84F6013F0DA2E8A /* WorkoutView.swift */; };
+		ECFE41634774B94AFCFA493F /* LogBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB1F8D9740ACC4F47B7C43 /* LogBook.swift */; };
+		F78BF4AFAC379BDBC9EC03B4 /* TrainingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3237CDACEC166416F4890119 /* TrainingPlan.swift */; };
+		FC28FCFE3092331B007D8F36 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC28FCFD3092331B007D8F36 /* TimerView.swift */; };
+		FC28FD00309236FC007D8F36 /* IntervalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC28FCFF309236FC007D8F36 /* IntervalSettings.swift */; };
+		FC28FD0230923B25007D8F36 /* IntervalTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC28FD0130923B25007D8F36 /* IntervalTimer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0404BC770776AA0C6FE1BD40 /* DoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneView.swift; sourceTree = "<group>"; };
+		07F31C965D8E8AEA5939A148 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		0865A1C2D34659CF3C6E734A /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		104573447F98E7DD5FCCF2EE /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		10A656FAB21A5F7C89E146C3 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		272C7E43835515B5BAF29761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3237CDACEC166416F4890119 /* TrainingPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPlan.swift; sourceTree = "<group>"; };
+		5760382A57C6574A421490EF /* SessionPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlanner.swift; sourceTree = "<group>"; };
+		5ABE2A21E84F6013F0DA2E8A /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		712E9B2FA993D6D287380732 /* GhisaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhisaApp.swift; sourceTree = "<group>"; };
+		74E6113CFF7CABD24B131EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7FBBD541F1C3649B82932EF9 /* WorkbookParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbookParser.swift; sourceTree = "<group>"; };
+		98565EA878F9CE92766EE713 /* RestTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimer.swift; sourceTree = "<group>"; };
+		A1B84F26602F7865E13FED70 /* XlsxPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XlsxPackage.swift; sourceTree = "<group>"; };
+		A414A7D5B50315FE80E09CE5 /* Ghisa.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Ghisa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB393DDBE8301740CF3B2245 /* XmlNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlNode.swift; sourceTree = "<group>"; };
+		ACEF030FAA12841DEEAAE5AB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B180C19033BE05BBFC87F077 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B6C008A21124DB232ECDB04E /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		BCAE8B78B3148AE92CE38496 /* SetValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetValues.swift; sourceTree = "<group>"; };
+		C04B03D7829A4B65DB5FA16A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D1BB1F8D9740ACC4F47B7C43 /* LogBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogBook.swift; sourceTree = "<group>"; };
+		E146DA3D6EB57F64384DC61F /* Zip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip.swift; sourceTree = "<group>"; };
+		FB3D7240EF7FF40E3A84173F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		FC28FCFD3092331B007D8F36 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		FC28FCFF309236FC007D8F36 /* IntervalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalSettings.swift; sourceTree = "<group>"; };
+		FC28FD0130923B25007D8F36 /* IntervalTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTimer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00ED6F04622CDEDE41ACF97C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FB3D7240EF7FF40E3A84173F /* AppState.swift */,
+				0865A1C2D34659CF3C6E734A /* Platform.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		24CCFDF445F4A819859BB4F8 /* Ghisa */ = {
+			isa = PBXGroup;
+			children = (
+				712E9B2FA993D6D287380732 /* GhisaApp.swift */,
+				272C7E43835515B5BAF29761 /* Info.plist */,
+				349B15E1BB03653444323AA6 /* Core */,
+				F2264C2D56CFB3E24C210EF3 /* Models */,
+				460B088CBA4644EA6EF1B104 /* Resources */,
+				00ED6F04622CDEDE41ACF97C /* Services */,
+				A8193EF1055DA4A62D83B43C /* Views */,
+			);
+			path = Ghisa;
+			sourceTree = "<group>";
+		};
+		349B15E1BB03653444323AA6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D1BB1F8D9740ACC4F47B7C43 /* LogBook.swift */,
+				5760382A57C6574A421490EF /* SessionPlanner.swift */,
+				BCAE8B78B3148AE92CE38496 /* SetValues.swift */,
+				3237CDACEC166416F4890119 /* TrainingPlan.swift */,
+				7FBBD541F1C3649B82932EF9 /* WorkbookParser.swift */,
+				9204D33A72EA6F6F3CDE76A7 /* Xlsx */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		460B088CBA4644EA6EF1B104 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74E6113CFF7CABD24B131EB0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9204D33A72EA6F6F3CDE76A7 /* Xlsx */ = {
+			isa = PBXGroup;
+			children = (
+				A1B84F26602F7865E13FED70 /* XlsxPackage.swift */,
+				AB393DDBE8301740CF3B2245 /* XmlNode.swift */,
+				E146DA3D6EB57F64384DC61F /* Zip.swift */,
+			);
+			path = Xlsx;
+			sourceTree = "<group>";
+		};
+		A8193EF1055DA4A62D83B43C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0404BC770776AA0C6FE1BD40 /* DoneView.swift */,
+				ACEF030FAA12841DEEAAE5AB /* HomeView.swift */,
+				10A656FAB21A5F7C89E146C3 /* PreviewData.swift */,
+				B180C19033BE05BBFC87F077 /* RootView.swift */,
+				C04B03D7829A4B65DB5FA16A /* Theme.swift */,
+				5ABE2A21E84F6013F0DA2E8A /* WorkoutView.swift */,
+				FC28FCFD3092331B007D8F36 /* TimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BCF80E4102DC54523C9915AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A414A7D5B50315FE80E09CE5 /* Ghisa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4DE108EB596A3C78414799A = {
+			isa = PBXGroup;
+			children = (
+				24CCFDF445F4A819859BB4F8 /* Ghisa */,
+				BCF80E4102DC54523C9915AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2264C2D56CFB3E24C210EF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07F31C965D8E8AEA5939A148 /* AppModel.swift */,
+				104573447F98E7DD5FCCF2EE /* Exercise.swift */,
+				98565EA878F9CE92766EE713 /* RestTimer.swift */,
+				B6C008A21124DB232ECDB04E /* WorkoutModel.swift */,
+				FC28FCFF309236FC007D8F36 /* IntervalSettings.swift */,
+				FC28FD0130923B25007D8F36 /* IntervalTimer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		813C3C49750ED47722DE9C5A /* Ghisa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD5E8EA84C9E549105F192F /* Build configuration list for PBXNativeTarget "Ghisa" */;
+			buildPhases = (
+				92D87B3F13887625EEF68D8E /* Sources */,
+				93C4B55B2407F5B45C087479 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ghisa;
+			packageProductDependencies = (
+			);
+			productName = Ghisa;
+			productReference = A414A7D5B50315FE80E09CE5 /* Ghisa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CD36EA356EB5C0DFFF62783 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					813C3C49750ED47722DE9C5A = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 654FB341001A650FD7305CEC /* Build configuration list for PBXProject "Ghisa" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E4DE108EB596A3C78414799A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BCF80E4102DC54523C9915AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				813C3C49750ED47722DE9C5A /* Ghisa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93C4B55B2407F5B45C087479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B419DBEFF3949AE8E17EE9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92D87B3F13887625EEF68D8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				805B5C6C2FDF7ED4397FFA44 /* AppModel.swift in Sources */,
+				10DE6B8F9D6F793720173AF0 /* AppState.swift in Sources */,
+				B2F6DB59380C2775AA5BC00C /* DoneView.swift in Sources */,
+				87DC17951CCA4536E5AE8DC4 /* Exercise.swift in Sources */,
+				A8DF2AA45D7FF8AEC322B6C9 /* GhisaApp.swift in Sources */,
+				1B1C1C0FFAD3D38A031F946B /* HomeView.swift in Sources */,
+				FC28FD00309236FC007D8F36 /* IntervalSettings.swift in Sources */,
+				FC28FCFE3092331B007D8F36 /* TimerView.swift in Sources */,
+				ECFE41634774B94AFCFA493F /* LogBook.swift in Sources */,
+				A8CA34FE07CB472F0A14B84B /* Platform.swift in Sources */,
+				2D88766DB1298B5CA3F580E4 /* PreviewData.swift in Sources */,
+				67A7C268A09520FCD050C3A4 /* RestTimer.swift in Sources */,
+				27580D1D8292EE8AEA83D964 /* RootView.swift in Sources */,
+				B2C191BF01727A89C537C878 /* SessionPlanner.swift in Sources */,
+				4CB5186B505A04551144DCDE /* SetValues.swift in Sources */,
+				98BF33A6AAB652DFBA8B90E6 /* Theme.swift in Sources */,
+				F78BF4AFAC379BDBC9EC03B4 /* TrainingPlan.swift in Sources */,
+				05ADB17C265D93AAC55118AB /* WorkbookParser.swift in Sources */,
+				4F751780E10C7F41B990EAC0 /* WorkoutModel.swift in Sources */,
+				D403AC2052FD192E22CCFF57 /* WorkoutView.swift in Sources */,
+				FC28FD0230923B25007D8F36 /* IntervalTimer.swift in Sources */,
+				3F403B5F0E92A1FABE12658B /* XlsxPackage.swift in Sources */,
+				168EED4344E760B3F3ED296B /* XmlNode.swift in Sources */,
+				28A3B8C73D0193CC7B9AB06F /* Zip.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3C43E325930706F540E3A894 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ghisa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Ghisa;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.simone.ghisa;
+				PRODUCT_NAME = Ghisa;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4E0A2AA45DD9F083B00EC2E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9A16E6E593618BF9DC5C85DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C8EA66AFBA97F09BD2AE5087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ghisa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Ghisa;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.simone.ghisa;
+				PRODUCT_NAME = Ghisa;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		654FB341001A650FD7305CEC /* Build configuration list for PBXProject "Ghisa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A16E6E593618BF9DC5C85DA /* Debug */,
+				4E0A2AA45DD9F083B00EC2E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8BD5E8EA84C9E549105F192F /* Build configuration list for PBXNativeTarget "Ghisa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C43E325930706F540E3A894 /* Debug */,
+				C8EA66AFBA97F09BD2AE5087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CD36EA356EB5C0DFFF62783 /* Project object */;
+}

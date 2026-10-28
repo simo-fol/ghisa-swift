@@ -1,0 +1,11 @@
+.DS_Store
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.ipa
+Payload/
+
+# Personal training data never goes in the repo
+*.xlsx
+*.xls

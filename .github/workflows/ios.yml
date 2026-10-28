@@ -1,0 +1,46 @@
+name: iOS build
+
+# Builds an unsigned .ipa on a free macOS runner. SideStore/AltStore sign it
+# with your free Apple ID when you install it on the iPhone.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ipa:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build
+        run: >
+          xcodebuild -project Ghisa.xcodeproj -scheme Ghisa
+          -configuration Release -sdk iphoneos -destination 'generic/platform=iOS'
+          -derivedDataPath build
+          CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
+          CURRENT_PROJECT_VERSION=${{ github.run_number }}
+          build
+
+      - name: Package unsigned IPA
+        run: |
+          mkdir Payload
+          cp -R build/Build/Products/Release-iphoneos/Ghisa.app Payload/
+          zip -qry Ghisa.ipa Payload
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Ghisa-ipa
+          path: Ghisa.ipa
+
+      - name: Publish to the "latest" release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Ultima build
+          body: Build ${{ github.run_number }} da ${{ github.sha }}. Scarica Ghisa.ipa e aprilo con SideStore/AltStore.
+          files: Ghisa.ipa
+          make_latest: true
