@@ -16,14 +16,33 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      # Newest stable Xcode on the runner (same approach as the Avalonia repo).
+      - name: Select Xcode
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_*.app | grep -vi beta | sort -V | tail -1)
+          # Names like Xcode_26.5.0.app are symlinks; resolve them.
+          XCODE=$(cd "$XCODE" && pwd -P)
+          echo "Using $XCODE"
+          sudo xcode-select -s "$XCODE/Contents/Developer"
+          xcodebuild -version
+          xcodebuild -showsdks | grep -i ios
+
+      # Compiler errors are also reported as annotations: those are readable without signing in.
       - name: Build
-        run: >
-          xcodebuild -project Ghisa.xcodeproj -scheme Ghisa
-          -configuration Release -sdk iphoneos -destination 'generic/platform=iOS'
-          -derivedDataPath build
-          CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
-          CURRENT_PROJECT_VERSION=${{ github.run_number }}
-          build
+        run: |
+          if ! xcodebuild -project Ghisa.xcodeproj -scheme Ghisa \
+              -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' \
+              -derivedDataPath build \
+              CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+              CURRENT_PROJECT_VERSION=${{ github.run_number }} \
+              build > build.log 2>&1; then
+            grep -E "error:|xcodebuild: error" build.log | sort -u | head -30 | while read -r line; do
+              echo "::error::$line"
+            done
+            tail -60 build.log
+            exit 1
+          fi
+          grep -E "\*\* BUILD" build.log
 
       - name: Package unsigned IPA
         run: |
