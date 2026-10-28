@@ -1,3 +1,5 @@
+import AudioToolbox
+import AVFoundation
 import UIKit
 import UserNotifications
 
@@ -48,7 +50,7 @@ enum Platform {
     private static let intervalPrefix = "interval-"
 
     /// One alert per phase change of the interval timer, replacing any previous ones.
-    static func scheduleIntervalAlerts(_ alerts: [(after: TimeInterval, title: String, body: String)]) {
+    static func scheduleIntervalAlerts(_ alerts: [(after: TimeInterval, title: String, body: String, sound: String)]) {
         cancelIntervalAlerts()
         let center = UNUserNotificationCenter.current()
         // iOS keeps at most 64 pending notifications per app.
@@ -56,7 +58,7 @@ enum Platform {
             let content = UNMutableNotificationContent()
             content.title = alert.title
             content.body = alert.body
-            content.sound = .default
+            content.sound = UNNotificationSound(named: UNNotificationSoundName(alert.sound + ".wav"))
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: max(1, alert.after), repeats: false)
             center.add(UNNotificationRequest(identifier: intervalPrefix + String(i), content: content, trigger: trigger))
         }
@@ -71,18 +73,32 @@ enum Platform {
 
     static func haptic() { UIImpactFeedbackGenerator(style: .medium).impactOccurred() }
 
-    /// Stronger buzz for a phase change of the interval timer.
-    static func phaseHaptic() { UINotificationFeedbackGenerator().notificationOccurred(.warning) }
+    private static var player: AVAudioPlayer?
+
+    /// Phase change of the interval timer: a full vibration plus a beep (a .wav in Resources/Sounds).
+    /// The beep plays over music and also with the ring/silent switch on silent.
+    static func phaseAlert(sound: String) {
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        UINotificationFeedbackGenerator().notificationOccurred(.warning)
+
+        guard let url = Bundle.main.url(forResource: sound, withExtension: "wav") else { return }
+        let session = AVAudioSession.sharedInstance()
+        try? session.setCategory(.playback, options: [.mixWithOthers])
+        try? session.setActive(true)
+        player = try? AVAudioPlayer(contentsOf: url)
+        player?.volume = 1
+        player?.play()
+    }
 
     /// Shows the "rest is over" banner and sound even while the app is open.
-    /// Interval alerts only ring: the timer screen already shows the new phase.
+    /// Interval alerts stay silent while the app is open: the timer screen beeps and vibrates itself.
     private final class ForegroundPresenter: NSObject, UNUserNotificationCenterDelegate {
         static let shared = ForegroundPresenter()
 
         func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification,
                                     withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
             let isInterval = notification.request.identifier.hasPrefix(Platform.intervalPrefix)
-            completionHandler(isInterval ? [.sound] : [.banner, .list, .sound])
+            completionHandler(isInterval ? [] : [.banner, .list, .sound])
         }
     }
 }

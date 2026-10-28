@@ -23,6 +23,15 @@ final class IntervalTimer {
             case .finished: "Finito!"
             }
         }
+
+        /// Beep played when this phase starts (file name in Resources/Sounds, without ".wav").
+        var sound: String {
+            switch self {
+            case .rest: "phase-rest"
+            case .finished: "phase-done"
+            case .idle, .prepare, .work: "phase-work"
+            }
+        }
     }
 
     private(set) var phase = Phase.idle
@@ -105,7 +114,8 @@ final class IntervalTimer {
 
     private func nextPhase() {
         guard let next = Self.following(phase, round: round, settings: settings) else { return }
-        Platform.phaseHaptic()
+        // Phases that ended while the app was in the background already rang as notifications.
+        if Date().timeIntervalSince(endsAt) < 1 { Platform.phaseAlert(sound: next.phase.sound) }
         round = next.round
         if next.phase == .finished {
             tick?.invalidate()
@@ -139,14 +149,14 @@ final class IntervalTimer {
 
     /// One notification per upcoming phase change, so the timer is heard with the phone locked.
     private func scheduleAlerts() {
-        var alerts: [(after: TimeInterval, title: String, body: String)] = []
+        var alerts: [(after: TimeInterval, title: String, body: String, sound: String)] = []
         var at = endsAt.timeIntervalSinceNow
         var current = (phase: phase, round: round)
         while let next = Self.following(current.phase, round: current.round, settings: settings) {
             let body = next.phase == .finished
                 ? "\(settings.rounds) giri completati 💪"
                 : "Giro \(next.round) di \(settings.rounds) · \(IntervalSettings.format(next.seconds))"
-            alerts.append((at, next.phase.title, body))
+            alerts.append((at, next.phase.title, body, next.phase.sound))
             at += Double(next.seconds)
             current = (next.phase, next.round)
         }
