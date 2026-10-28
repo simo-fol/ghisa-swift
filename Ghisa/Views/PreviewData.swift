@@ -1,4 +1,3 @@
-#if DEBUG
 import Foundation
 
 /// A small coach sheet built in memory, so the Xcode Canvas can show every screen.
@@ -84,4 +83,3 @@ enum PreviewData {
         return Zip.write(files.map { Zip.Entry(name: $0.0, data: Data($0.1.utf8)) })
     }
 }
-#endif

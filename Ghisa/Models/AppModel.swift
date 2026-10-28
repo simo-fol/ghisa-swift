@@ -20,14 +20,12 @@ final class AppModel {
     @ObservationIgnored private var toastTask: Task<Void, Never>?
     @ObservationIgnored private var persists = true
 
-    #if DEBUG
     /// In-memory app for Xcode previews: nothing is read from or written to disk.
     init(previewBook: LogBook?) {
         persists = false
         state = AppState(workbookFile: previewBook == nil ? nil : "Scheda.xlsx")
         book = previewBook
     }
-    #endif
 
     init() {
         state = StateStore.load()
