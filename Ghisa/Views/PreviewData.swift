@@ -23,6 +23,30 @@ enum PreviewData {
     static let done = DoneSummary(title: "Split A completato", slotLabel: "Microciclo 1 · Settimana II",
                                   recorded: 3, total: 3, minutes: 52, savedToOriginal: true)
 
+    /// Two rooms with a few machines, two of them linked to exercises of split A.
+    static func gym() -> GymStore {
+        let bench = MapItem(name: "Panca regolabile", column: 2, row: 2)
+        let lat = MapItem(name: "Lat machine", column: 6, row: 2, width: 2)
+        var weights = Room(name: "Sala pesi", columns: 8, rows: 10)
+        weights.items = [
+            MapItem(kind: .zone, name: "Pesi liberi", column: 1, row: 1, width: 4, height: 5, color: 1),
+            bench,
+            MapItem(name: "Rastrelliera manubri", column: 1, row: 4, width: 3),
+            lat,
+            MapItem(name: "Leg press", column: 6, row: 6, width: 2, height: 2),
+            MapItem(name: "Squat rack", column: 2, row: 8, width: 2),
+        ]
+        var cardio = Room(name: "Sala cardio", columns: 6, rows: 6)
+        cardio.items = [MapItem(name: "Tapis roulant", column: 1, row: 1, width: 3)]
+
+        var map = GymMap(rooms: [weights, cardio])
+        map.links[GymStore.key("PANCA PIANA")] = ExerciseLink(item: bench.id, setting: "Schienale piatto, sedile 2",
+                                                               exercise: "Panca Piana")
+        map.links[GymStore.key("LAT MACHINE PRESA LARGA")] = ExerciseLink(item: lat.id, setting: "Rullo al 3° foro",
+                                                                           exercise: "Lat Machine Presa Larga")
+        return GymStore(preview: map)
+    }
+
     // MARK: Workbook
 
     private static func workbook() -> Data {

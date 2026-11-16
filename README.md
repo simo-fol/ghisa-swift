@@ -9,6 +9,8 @@ Versione SwiftUI dell'app *Allenamento* (repository `ghisa`, Avalonia/.NET): ste
 - **Le tue note** per esercizio restano salvate e le ritrovi la volta dopo.
 - **Termina e salva** scrive nel foglio, nelle celle Carico/Reps della settimana, nel formato `20-22.5-25` / `8-7-6`. Formattazione, colori e celle unite restano intatti.
 - Se l'app viene chiusa a metà allenamento, lo riprendi dalla home.
+- **Timer** a intervalli (preparazione, lavoro, recupero, giri) con beep e vibrazione a ogni cambio.
+- **Mappa palestra**: sale su una griglia invisibile (colonne A, B, C… e righe 1, 2, 3…), con macchinari (anche su più celle), zone colorate e una foto per macchinario. Ogni esercizio si collega a un macchinario o a una zona con la sua impostazione ("schienale 30°"): nella card dell'allenamento compare 📍 dove si trova, e toccandolo si apre la mappa con il macchinario evidenziato. Il collegamento vale per nome dell'esercizio, in tutte le schede. Mappa e foto restano nell'app (non nell'Excel).
 
 Ha un bundle ID diverso (`com.simone.ghisa`) dall'app Avalonia, quindi possono stare installate insieme.
 
@@ -18,6 +20,8 @@ Ha un bundle ID diverso (`com.simone.ghisa`) dall'app Avalonia, quindi possono s
 |---|---|
 | `Ghisa/Core` | Lettura/scrittura xlsx senza dipendenze (zip e XML fatti a mano), interpretazione della scheda, calcolo della prossima seduta. Porting fedele di `WorkoutLog.Core`. |
 | `Ghisa/Models` | Stato delle schermate: home, allenamento, esercizi, serie, timer di recupero. |
+| `Ghisa/Models/GymMap.swift`, `GymStore.swift` | Dati della mappa (sale, macchinari, zone, collegamenti) e salvataggio in `gym-map.json` + cartella `MachinePhotos`. |
+| `Ghisa/Views/Map` | Schermate della mappa: griglia, editor del macchinario, collegamento esercizio → macchinario. |
 | `Ghisa/Views` | Le schermate SwiftUI. Aprile in Xcode e usa il Canvas (⌥⌘↩) per l'anteprima. |
 | `Ghisa/Services` | Salvataggio dello stato, notifiche, schermo acceso, vibrazione. |
 

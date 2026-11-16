@@ -8,7 +8,7 @@ struct WorkoutView: View {
             header
 
             ScrollView {
-                VStack(spacing: 50) {
+                VStack(spacing: 10) {
                     ForEach($workout.exercises) { $exercise in
                         ExerciseCard(exercise: $exercise, workout: workout)
                     }
@@ -60,6 +60,11 @@ private struct ExerciseCard: View {
     @Binding var exercise: Exercise
     let workout: WorkoutModel
 
+    @State private var showMap = false
+    @State private var showLink = false
+
+    private var gym: GymStore { workout.app.gym }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Button { workout.toggle(exercise) } label: {
@@ -103,6 +108,8 @@ private struct ExerciseCard: View {
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 12, trailing: 16))
             }
 
+            if let found = gym.link(for: exercise.row.name) { placeRow(found.link, found.item) }
+
             if exercise.isExpanded { expanded }
         }
         .background(Theme.surface, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
@@ -111,6 +118,40 @@ private struct ExerciseCard: View {
                 .stroke(exercise.isComplete ? Theme.accent.opacity(0.4)
                         : exercise.isExpanded ? Theme.surface3 : .clear, lineWidth: 1))
         .animation(.easeOut(duration: 0.2), value: exercise.isExpanded)
+        .fullScreenCover(isPresented: $showMap) {
+            GymMapView(gym: gym, focus: gym.link(for: exercise.row.name)?.item.id, close: { showMap = false })
+        }
+        .sheet(isPresented: $showLink) {
+            ExerciseLinkSheet(gym: gym, exercise: exercise.row.name, title: exercise.name)
+                .preferredColorScheme(.dark)
+        }
+    }
+
+    /// "📍 Sala pesi · C3 / Panca regolabile / Schienale 30°": tap to see it on the map, ✎ to change it.
+    private func placeRow(_ link: ExerciseLink, _ item: MapItem) -> some View {
+        HStack(spacing: 10) {
+            Button { showMap = true } label: {
+                HStack(spacing: 10) {
+                    PhotoThumb(image: gym.photo(item), size: 44)
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("📍 " + gym.place(of: item))
+                            .font(.system(size: 11, weight: .semibold))
+                            .foregroundStyle(Theme.accent)
+                        Text(item.name).font(.system(size: 15, weight: .semibold))
+                        if !link.setting.isEmpty {
+                            Text(link.setting).font(.system(size: 13)).foregroundStyle(Theme.warm)
+                        }
+                    }
+                    Spacer(minLength: 0)
+                }
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            RoundButton(label: "✎", size: 34, fontSize: 15, background: Theme.surface3) { showLink = true }
+        }
+        .padding(8)
+        .background(Theme.surface2, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .padding(EdgeInsets(top: 0, leading: 16, bottom: 12, trailing: 16))
     }
 
     private var expanded: some View {
@@ -156,6 +197,13 @@ private struct ExerciseCard: View {
             // Every label stays on one line; if space is short, they shrink a little instead of wrapping.
             .lineLimit(1)
             .minimumScaleFactor(0.8)
+
+            if gym.link(for: exercise.row.name) == nil {
+                Button { showLink = true } label: {
+                    Label("Dove si fa? Collega un macchinario", systemImage: "mappin.and.ellipse")
+                }
+                .buttonStyle(PillButtonStyle())
+            }
 
             TextField("Le tue note (sedile 4, presa larga…)",
                       text: $exercise.note, axis: .vertical)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05ADB17C265D93AAC55118AB /* WorkbookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBD541F1C3649B82932EF9 /* WorkbookParser.swift */; };
 		10DE6B8F9D6F793720173AF0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D7240EF7FF40E3A84173F /* AppState.swift */; };
+		15338B02FC82AFE285CEFE07 /* MapItemEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E1B2938853650A7B7D16B /* MapItemEditor.swift */; };
 		168EED4344E760B3F3ED296B /* XmlNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB393DDBE8301740CF3B2245 /* XmlNode.swift */; };
 		1888E4F850EA83D6C3D97C5A /* phase-work.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A39C2EA33F5D33D67A179C2 /* phase-work.wav */; };
 		1B1C1C0FFAD3D38A031F946B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF030FAA12841DEEAAE5AB /* HomeView.swift */; };
@@ -17,17 +18,23 @@
 		27580D1D8292EE8AEA83D964 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B180C19033BE05BBFC87F077 /* RootView.swift */; };
 		28A3B8C73D0193CC7B9AB06F /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146DA3D6EB57F64384DC61F /* Zip.swift */; };
 		2D88766DB1298B5CA3F580E4 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A656FAB21A5F7C89E146C3 /* PreviewData.swift */; };
+		31070C30AD4698D793E08AA7 /* MapGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF522CB5C76F8DE7A5152CF /* MapGrid.swift */; };
+		37342FCD678A61C536DBE5AB /* MapParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659585FF03791B8D802FFD72 /* MapParts.swift */; };
 		3F403B5F0E92A1FABE12658B /* XlsxPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B84F26602F7865E13FED70 /* XlsxPackage.swift */; };
 		40CB04D9DCB722FE8E5BFB4A /* phase-rest.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4FBF8C684E788BD314D08769 /* phase-rest.wav */; };
 		4CB5186B505A04551144DCDE /* SetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAE8B78B3148AE92CE38496 /* SetValues.swift */; };
 		4F751780E10C7F41B990EAC0 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C008A21124DB232ECDB04E /* WorkoutModel.swift */; };
+		5DF67A00C3AE42AA71D6D9A0 /* GymMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D5EF2B803E0423599A565 /* GymMap.swift */; };
+		6608812E7865DFC445945C90 /* GymMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5E4C6AE6385A34E6FFDCBB /* GymMapView.swift */; };
 		66B419DBEFF3949AE8E17EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E6113CFF7CABD24B131EB0 /* Assets.xcassets */; };
 		67A7C268A09520FCD050C3A4 /* RestTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98565EA878F9CE92766EE713 /* RestTimer.swift */; };
 		71E61AA715317D32523D3FAD /* IntervalTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52244A1A5D256C0AA1C035DD /* IntervalTimer.swift */; };
 		805B5C6C2FDF7ED4397FFA44 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F31C965D8E8AEA5939A148 /* AppModel.swift */; };
 		83AF5A006B7FC48D7D743361 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C69056EEAF47D6C412F80 /* TimerView.swift */; };
 		87DC17951CCA4536E5AE8DC4 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104573447F98E7DD5FCCF2EE /* Exercise.swift */; };
+		91851AD0D3B2C4ECDF41C88F /* ExerciseLinkSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B094A7480325F4CE62742A1 /* ExerciseLinkSheet.swift */; };
 		98BF33A6AAB652DFBA8B90E6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B03D7829A4B65DB5FA16A /* Theme.swift */; };
+		98F40DAC886AEEA61B7B7A19 /* GymStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013C4AE793A9476AB2F4BEAC /* GymStore.swift */; };
 		A8CA34FE07CB472F0A14B84B /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865A1C2D34659CF3C6E734A /* Platform.swift */; };
 		A8DF2AA45D7FF8AEC322B6C9 /* GhisaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712E9B2FA993D6D287380732 /* GhisaApp.swift */; };
 		B2C191BF01727A89C537C878 /* SessionPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760382A57C6574A421490EF /* SessionPlanner.swift */; };
@@ -38,12 +45,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		013C4AE793A9476AB2F4BEAC /* GymStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymStore.swift; sourceTree = "<group>"; };
 		0404BC770776AA0C6FE1BD40 /* DoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneView.swift; sourceTree = "<group>"; };
 		07F31C965D8E8AEA5939A148 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		0865A1C2D34659CF3C6E734A /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		0DF522CB5C76F8DE7A5152CF /* MapGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapGrid.swift; sourceTree = "<group>"; };
 		104573447F98E7DD5FCCF2EE /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		10A656FAB21A5F7C89E146C3 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		1A39C2EA33F5D33D67A179C2 /* phase-work.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "phase-work.wav"; sourceTree = "<group>"; };
+		1B094A7480325F4CE62742A1 /* ExerciseLinkSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLinkSheet.swift; sourceTree = "<group>"; };
 		1E8C69056EEAF47D6C412F80 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		272C7E43835515B5BAF29761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3237CDACEC166416F4890119 /* TrainingPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPlan.swift; sourceTree = "<group>"; };
@@ -52,9 +62,11 @@
 		52244A1A5D256C0AA1C035DD /* IntervalTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTimer.swift; sourceTree = "<group>"; };
 		5760382A57C6574A421490EF /* SessionPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlanner.swift; sourceTree = "<group>"; };
 		5ABE2A21E84F6013F0DA2E8A /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		659585FF03791B8D802FFD72 /* MapParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapParts.swift; sourceTree = "<group>"; };
 		712E9B2FA993D6D287380732 /* GhisaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhisaApp.swift; sourceTree = "<group>"; };
 		74E6113CFF7CABD24B131EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FBBD541F1C3649B82932EF9 /* WorkbookParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbookParser.swift; sourceTree = "<group>"; };
+		8A5E4C6AE6385A34E6FFDCBB /* GymMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymMapView.swift; sourceTree = "<group>"; };
 		98565EA878F9CE92766EE713 /* RestTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimer.swift; sourceTree = "<group>"; };
 		A1B84F26602F7865E13FED70 /* XlsxPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XlsxPackage.swift; sourceTree = "<group>"; };
 		A414A7D5B50315FE80E09CE5 /* Ghisa.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Ghisa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +77,9 @@
 		B6E2E40345303B0DB2F6C586 /* phase-done.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "phase-done.wav"; sourceTree = "<group>"; };
 		BCAE8B78B3148AE92CE38496 /* SetValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetValues.swift; sourceTree = "<group>"; };
 		C04B03D7829A4B65DB5FA16A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C98E1B2938853650A7B7D16B /* MapItemEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItemEditor.swift; sourceTree = "<group>"; };
 		D1BB1F8D9740ACC4F47B7C43 /* LogBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogBook.swift; sourceTree = "<group>"; };
+		D76D5EF2B803E0423599A565 /* GymMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymMap.swift; sourceTree = "<group>"; };
 		E146DA3D6EB57F64384DC61F /* Zip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip.swift; sourceTree = "<group>"; };
 		FB3D7240EF7FF40E3A84173F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +160,7 @@
 				C04B03D7829A4B65DB5FA16A /* Theme.swift */,
 				1E8C69056EEAF47D6C412F80 /* TimerView.swift */,
 				5ABE2A21E84F6013F0DA2E8A /* WorkoutView.swift */,
+				E5F145A4A94800B89300566B /* Map */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,11 +181,25 @@
 			);
 			sourceTree = "<group>";
 		};
+		E5F145A4A94800B89300566B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1B094A7480325F4CE62742A1 /* ExerciseLinkSheet.swift */,
+				8A5E4C6AE6385A34E6FFDCBB /* GymMapView.swift */,
+				0DF522CB5C76F8DE7A5152CF /* MapGrid.swift */,
+				C98E1B2938853650A7B7D16B /* MapItemEditor.swift */,
+				659585FF03791B8D802FFD72 /* MapParts.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		F2264C2D56CFB3E24C210EF3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				07F31C965D8E8AEA5939A148 /* AppModel.swift */,
 				104573447F98E7DD5FCCF2EE /* Exercise.swift */,
+				D76D5EF2B803E0423599A565 /* GymMap.swift */,
+				013C4AE793A9476AB2F4BEAC /* GymStore.swift */,
 				47B7FEC1E120619FAA3EA5DC /* IntervalSettings.swift */,
 				52244A1A5D256C0AA1C035DD /* IntervalTimer.swift */,
 				98565EA878F9CE92766EE713 /* RestTimer.swift */,
@@ -257,11 +286,18 @@
 				10DE6B8F9D6F793720173AF0 /* AppState.swift in Sources */,
 				B2F6DB59380C2775AA5BC00C /* DoneView.swift in Sources */,
 				87DC17951CCA4536E5AE8DC4 /* Exercise.swift in Sources */,
+				91851AD0D3B2C4ECDF41C88F /* ExerciseLinkSheet.swift in Sources */,
 				A8DF2AA45D7FF8AEC322B6C9 /* GhisaApp.swift in Sources */,
+				5DF67A00C3AE42AA71D6D9A0 /* GymMap.swift in Sources */,
+				6608812E7865DFC445945C90 /* GymMapView.swift in Sources */,
+				98F40DAC886AEEA61B7B7A19 /* GymStore.swift in Sources */,
 				1B1C1C0FFAD3D38A031F946B /* HomeView.swift in Sources */,
 				248372476C4109AF5F7A922E /* IntervalSettings.swift in Sources */,
 				71E61AA715317D32523D3FAD /* IntervalTimer.swift in Sources */,
 				ECFE41634774B94AFCFA493F /* LogBook.swift in Sources */,
+				31070C30AD4698D793E08AA7 /* MapGrid.swift in Sources */,
+				15338B02FC82AFE285CEFE07 /* MapItemEditor.swift in Sources */,
+				37342FCD678A61C536DBE5AB /* MapParts.swift in Sources */,
 				A8CA34FE07CB472F0A14B84B /* Platform.swift in Sources */,
 				2D88766DB1298B5CA3F580E4 /* PreviewData.swift in Sources */,
 				67A7C268A09520FCD050C3A4 /* RestTimer.swift in Sources */,
@@ -294,6 +330,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Ghisa;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Per fotografare i macchinari della palestra.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -447,6 +484,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Ghisa;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Per fotografare i macchinari della palestra.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

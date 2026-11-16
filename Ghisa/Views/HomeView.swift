@@ -73,26 +73,10 @@ struct HomeView: View {
                         // A new sheet starts each card again from its next workout.
                         .id("\(proto.sheetName)-\(letter)")
                     }
-                    Button {app.page = .timer} label: {
-                        HStack(spacing: 14) {
-                            Image(systemName: "timer")
-                                .font(.system(size: 28, weight: .bold))
-                                .foregroundStyle(Theme.onAccent)
-                                .frame(width: 62, height: 62)
-                                .background(Theme.warm, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-                            VStack(alignment: .leading, spacing:3) {
-                                Text("Timer").font(.system(size: 19, weight: .bold))
-                                Text("Lavoro · recupero · preparazione")
-                                    .font(.system(size: 13))
-                                    .foregroundStyle(Theme.muted)
-                            }
-                            Spacer()
-                            Text("›").font(.system(size: 30)).foregroundStyle(Theme.muted)
-                        }
-                        .padding(16)
-                        .background(Theme.surface, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
-                    }
-                    .buttonStyle(.plain)
+                    ToolCard(icon: "timer", color: Theme.warm, title: "Timer",
+                             subtitle: "Lavoro · recupero · preparazione") { app.page = .timer }
+                    ToolCard(icon: "map", color: Color(hex: 0x5AC8FA), title: "Mappa palestra",
+                             subtitle: "Dove sono i macchinari e come impostarli") { app.page = .map }
                 }
 
                 Text(app.state.workbookFile ?? "")
@@ -149,6 +133,38 @@ struct HomeView: View {
         }
         .card(background: Theme.accentSoft)
         .overlay(RoundedRectangle(cornerRadius: 22, style: .continuous).stroke(Theme.accent, lineWidth: 1))
+    }
+}
+
+/// Fixed card of the home page that opens a tool (Timer, Mappa palestra).
+private struct ToolCard: View {
+    let icon: String
+    let color: Color
+    let title: String
+    let subtitle: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 14) {
+                Image(systemName: icon)
+                    .font(.system(size: 28, weight: .bold))
+                    .foregroundStyle(Theme.onAccent)
+                    .frame(width: 62, height: 62)
+                    .background(color, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(title).font(.system(size: 19, weight: .bold))
+                    Text(subtitle)
+                        .font(.system(size: 13))
+                        .foregroundStyle(Theme.muted)
+                }
+                Spacer()
+                Text("›").font(.system(size: 30)).foregroundStyle(Theme.muted)
+            }
+            .padding(16)
+            .background(Theme.surface, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+        }
+        .buttonStyle(.plain)
     }
 }
 

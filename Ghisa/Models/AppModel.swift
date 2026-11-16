@@ -6,6 +6,7 @@ enum Page {
     case workout(WorkoutModel)
     case done(DoneSummary)
     case timer
+    case map
 }
 
 /// Owns the loaded log book and app state, and switches between pages.
@@ -16,6 +17,8 @@ final class AppModel {
     var page: Page = .home
     var toast: String?
     var isImporting = false
+    /// Map of the gym with machines, photos and the exercises linked to them.
+    let gym: GymStore
 
     @ObservationIgnored private var toastTask: Task<Void, Never>?
     @ObservationIgnored private var persists = true
@@ -25,10 +28,12 @@ final class AppModel {
         persists = false
         state = AppState(workbookFile: previewBook == nil ? nil : "Scheda.xlsx")
         book = previewBook
+        gym = PreviewData.gym()
     }
 
     init() {
         state = StateStore.load()
+        gym = GymStore()
         tryOpenWorkingCopy()
         if book != nil, let draft = state.draft, let pi = findProtocol(draft.sheet) {
             page = .workout(WorkoutModel(app: self, protocolIndex: pi, split: draft.split,
