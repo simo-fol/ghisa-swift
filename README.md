@@ -11,6 +11,7 @@ Versione SwiftUI dell'app *Allenamento* (repository `ghisa`, Avalonia/.NET): ste
 - Se l'app viene chiusa a metà allenamento, lo riprendi dalla home.
 - **Timer** a intervalli (preparazione, lavoro, recupero, giri) con beep e vibrazione a ogni cambio.
 - **Mappa palestra**: sale su una griglia invisibile (colonne A, B, C… e righe 1, 2, 3…), con macchinari (anche su più celle), zone colorate e una foto per macchinario. Ogni esercizio si collega a un macchinario o a una zona con la sua impostazione ("schienale 30°"): nella card dell'allenamento compare 📍 dove si trova, e toccandolo si apre la mappa con il macchinario evidenziato. Il collegamento vale per nome dell'esercizio, in tutte le schede. Mappa e foto restano nell'app (non nell'Excel).
+- **Account** (in prova): accesso con email e password al database online Supabase; mostra chi sei e il tuo ruolo in ogni palestra. URL e chiave pubblica vanno in `SupabaseConfig` (`Ghisa/Services/Cloud.swift`). Schede e allenamenti per ora restano nell'app.
 
 Ha un bundle ID diverso (`com.simone.ghisa`) dall'app Avalonia, quindi possono stare installate insieme.
 
@@ -24,6 +25,8 @@ Ha un bundle ID diverso (`com.simone.ghisa`) dall'app Avalonia, quindi possono s
 | `Ghisa/Views/Map` | Schermate della mappa: griglia, editor del macchinario, collegamento esercizio → macchinario. |
 | `Ghisa/Views` | Le schermate SwiftUI. Aprile in Xcode e usa il Canvas (⌥⌘↩) per l'anteprima. |
 | `Ghisa/Services` | Salvataggio dello stato, notifiche, schermo acceso, vibrazione. |
+| `Ghisa/Services/Cloud.swift` | Collegamento al database Supabase: login, logout, lettura di `utenti` e `membri`. |
+| `supabase/` | Script SQL del database: `01_schema.sql` (tabelle, ruoli, permessi RLS) e `02_prova.sql` (utenti finti e controllo dei permessi, solo su un progetto di prova). |
 
 Dove si segna "fatto":
 - **serie**: tasto ✓ in `Views/WorkoutView.swift` (`SetRow`), logica in `SetModel.toggleDone()` in `Models/WorkoutModel.swift`;

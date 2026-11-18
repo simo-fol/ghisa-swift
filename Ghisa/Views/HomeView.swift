@@ -27,6 +27,10 @@ struct HomeView: View {
             Button("Carica la scheda Excel") { app.isImporting = true }
                 .buttonStyle(PrimaryButtonStyle())
                 .padding(.top, 12)
+            Button(app.cloud.email ?? "Accedi al tuo account") { app.page = .account }
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundStyle(Theme.accent)
+                .frame(maxWidth: .infinity)
         }
         .padding(28)
         .frame(maxHeight: .infinity)
@@ -77,6 +81,8 @@ struct HomeView: View {
                              subtitle: "Lavoro · recupero · preparazione") { app.page = .timer }
                     ToolCard(icon: "map", color: Color(hex: 0x5AC8FA), title: "Mappa palestra",
                              subtitle: "Dove sono i macchinari e come impostarli") { app.page = .map }
+                    ToolCard(icon: "person.crop.circle", color: Theme.accent, title: "Account",
+                             subtitle: app.cloud.email ?? "Accedi per salvare i dati online") { app.page = .account }
                 }
 
                 Text(app.state.workbookFile ?? "")

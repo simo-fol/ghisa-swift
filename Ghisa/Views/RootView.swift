@@ -16,6 +16,7 @@ struct RootView: View {
             case .done(let summary): DoneView(summary: summary, app: app)
             case .timer: TimerView(app: app)
             case .map: GymMapView(gym: app.gym, close: app.showHome)
+            case .account: AccountView(app: app, cloud: app.cloud)
             }
 
             if let toast = app.toast {

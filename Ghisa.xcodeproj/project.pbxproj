@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05ADB17C265D93AAC55118AB /* WorkbookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBD541F1C3649B82932EF9 /* WorkbookParser.swift */; };
+		0867E590534A8346D38E24EB /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643A092D5AA926879D8FA9F /* AccountView.swift */; };
 		10DE6B8F9D6F793720173AF0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D7240EF7FF40E3A84173F /* AppState.swift */; };
 		15338B02FC82AFE285CEFE07 /* MapItemEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E1B2938853650A7B7D16B /* MapItemEditor.swift */; };
 		168EED4344E760B3F3ED296B /* XmlNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB393DDBE8301740CF3B2245 /* XmlNode.swift */; };
@@ -24,6 +25,7 @@
 		40CB04D9DCB722FE8E5BFB4A /* phase-rest.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4FBF8C684E788BD314D08769 /* phase-rest.wav */; };
 		4CB5186B505A04551144DCDE /* SetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAE8B78B3148AE92CE38496 /* SetValues.swift */; };
 		4F751780E10C7F41B990EAC0 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C008A21124DB232ECDB04E /* WorkoutModel.swift */; };
+		52C4237CAD2074365440922D /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7EFDC54493B36F2AF4670331 /* Supabase */; };
 		5DF67A00C3AE42AA71D6D9A0 /* GymMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D5EF2B803E0423599A565 /* GymMap.swift */; };
 		6608812E7865DFC445945C90 /* GymMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5E4C6AE6385A34E6FFDCBB /* GymMapView.swift */; };
 		66B419DBEFF3949AE8E17EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E6113CFF7CABD24B131EB0 /* Assets.xcassets */; };
@@ -40,6 +42,7 @@
 		B2C191BF01727A89C537C878 /* SessionPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760382A57C6574A421490EF /* SessionPlanner.swift */; };
 		B2F6DB59380C2775AA5BC00C /* DoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404BC770776AA0C6FE1BD40 /* DoneView.swift */; };
 		D403AC2052FD192E22CCFF57 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE2A21E84F6013F0DA2E8A /* WorkoutView.swift */; };
+		E178AFB676E1DC44AAEDBB21 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FB96B2602A7D8D87B230CF /* Cloud.swift */; };
 		ECFE41634774B94AFCFA493F /* LogBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB1F8D9740ACC4F47B7C43 /* LogBook.swift */; };
 		F78BF4AFAC379BDBC9EC03B4 /* TrainingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3237CDACEC166416F4890119 /* TrainingPlan.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,7 @@
 		1A39C2EA33F5D33D67A179C2 /* phase-work.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "phase-work.wav"; sourceTree = "<group>"; };
 		1B094A7480325F4CE62742A1 /* ExerciseLinkSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLinkSheet.swift; sourceTree = "<group>"; };
 		1E8C69056EEAF47D6C412F80 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		2643A092D5AA926879D8FA9F /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		272C7E43835515B5BAF29761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3237CDACEC166416F4890119 /* TrainingPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPlan.swift; sourceTree = "<group>"; };
 		47B7FEC1E120619FAA3EA5DC /* IntervalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalSettings.swift; sourceTree = "<group>"; };
@@ -81,14 +85,27 @@
 		D1BB1F8D9740ACC4F47B7C43 /* LogBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogBook.swift; sourceTree = "<group>"; };
 		D76D5EF2B803E0423599A565 /* GymMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymMap.swift; sourceTree = "<group>"; };
 		E146DA3D6EB57F64384DC61F /* Zip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip.swift; sourceTree = "<group>"; };
+		E5FB96B2602A7D8D87B230CF /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		FB3D7240EF7FF40E3A84173F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88F6B42DEBE93B67CFC8AC1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C4237CAD2074365440922D /* Supabase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		00ED6F04622CDEDE41ACF97C /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				FB3D7240EF7FF40E3A84173F /* AppState.swift */,
+				E5FB96B2602A7D8D87B230CF /* Cloud.swift */,
 				0865A1C2D34659CF3C6E734A /* Platform.swift */,
 			);
 			path = Services;
@@ -153,6 +170,7 @@
 		A8193EF1055DA4A62D83B43C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2643A092D5AA926879D8FA9F /* AccountView.swift */,
 				0404BC770776AA0C6FE1BD40 /* DoneView.swift */,
 				ACEF030FAA12841DEEAAE5AB /* HomeView.swift */,
 				10A656FAB21A5F7C89E146C3 /* PreviewData.swift */,
@@ -217,6 +235,7 @@
 			buildPhases = (
 				92D87B3F13887625EEF68D8E /* Sources */,
 				93C4B55B2407F5B45C087479 /* Resources */,
+				88F6B42DEBE93B67CFC8AC1C /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,6 +243,7 @@
 			);
 			name = Ghisa;
 			packageProductDependencies = (
+				7EFDC54493B36F2AF4670331 /* Supabase */,
 			);
 			productName = Ghisa;
 			productReference = A414A7D5B50315FE80E09CE5 /* Ghisa.app */;
@@ -253,6 +273,9 @@
 			);
 			mainGroup = E4DE108EB596A3C78414799A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				954263A57C218A169EC82520 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BCF80E4102DC54523C9915AB /* Products */;
 			projectDirPath = "";
@@ -282,8 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0867E590534A8346D38E24EB /* AccountView.swift in Sources */,
 				805B5C6C2FDF7ED4397FFA44 /* AppModel.swift in Sources */,
 				10DE6B8F9D6F793720173AF0 /* AppState.swift in Sources */,
+				E178AFB676E1DC44AAEDBB21 /* Cloud.swift in Sources */,
 				B2F6DB59380C2775AA5BC00C /* DoneView.swift in Sources */,
 				87DC17951CCA4536E5AE8DC4 /* Exercise.swift in Sources */,
 				91851AD0D3B2C4ECDF41C88F /* ExerciseLinkSheet.swift in Sources */,
@@ -522,6 +547,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		954263A57C218A169EC82520 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.55.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7EFDC54493B36F2AF4670331 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 954263A57C218A169EC82520 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9CD36EA356EB5C0DFFF62783 /* Project object */;
 }
