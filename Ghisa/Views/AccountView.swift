@@ -20,7 +20,7 @@ struct AccountView: View {
                 }
 
                 if !cloud.isConfigured {
-                    Text("L'app non è ancora collegata al database: inserisci URL e chiave in SupabaseConfig (Services/Cloud.swift).")
+                    Text("L'app non è collegata al database: manca il file Config/Secrets.xcconfig con progetto e chiave di Supabase.")
                         .font(.system(size: 15))
                         .foregroundStyle(Theme.muted)
                         .frame(maxWidth: .infinity, alignment: .leading)

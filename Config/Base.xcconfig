@@ -1,0 +1,7 @@
+// Build settings shared by Debug and Release.
+// The Supabase project and key come from Secrets.xcconfig, which is not in git.
+// Copy Secrets.example.xcconfig to Secrets.xcconfig and fill it in.
+// Without it the app still builds: the Account page says it is not connected.
+SUPABASE_PROJECT =
+SUPABASE_KEY =
+#include? "Secrets.xcconfig"

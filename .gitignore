@@ -9,3 +9,6 @@ Payload/
 # Personal training data never goes in the repo
 *.xlsx
 *.xls
+
+# Supabase project and key: local only (the GitHub build gets them from repository secrets)
+Config/Secrets.xcconfig

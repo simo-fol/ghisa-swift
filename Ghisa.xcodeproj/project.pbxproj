@@ -83,6 +83,7 @@
 		C04B03D7829A4B65DB5FA16A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C98E1B2938853650A7B7D16B /* MapItemEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItemEditor.swift; sourceTree = "<group>"; };
 		D1BB1F8D9740ACC4F47B7C43 /* LogBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogBook.swift; sourceTree = "<group>"; };
+		D5890E6B3C1FAB53E1DAE375 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		D76D5EF2B803E0423599A565 /* GymMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymMap.swift; sourceTree = "<group>"; };
 		E146DA3D6EB57F64384DC61F /* Zip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip.swift; sourceTree = "<group>"; };
 		E5FB96B2602A7D8D87B230CF /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
@@ -167,6 +168,14 @@
 			path = Xlsx;
 			sourceTree = "<group>";
 		};
+		98850C83EDA5F555876473F7 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D5890E6B3C1FAB53E1DAE375 /* Base.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		A8193EF1055DA4A62D83B43C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +203,7 @@
 		E4DE108EB596A3C78414799A = {
 			isa = PBXGroup;
 			children = (
+				98850C83EDA5F555876473F7 /* Config */,
 				24CCFDF445F4A819859BB4F8 /* Ghisa */,
 				BCF80E4102DC54523C9915AB /* Products */,
 			);
@@ -346,6 +356,7 @@
 /* Begin XCBuildConfiguration section */
 		3C43E325930706F540E3A894 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5890E6B3C1FAB53E1DAE375 /* Base.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -500,6 +511,7 @@
 		};
 		C8EA66AFBA97F09BD2AE5087 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5890E6B3C1FAB53E1DAE375 /* Base.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

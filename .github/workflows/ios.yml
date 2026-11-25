@@ -27,6 +27,20 @@ jobs:
           xcodebuild -version
           xcodebuild -showsdks | grep -i ios
 
+      # The Supabase project and key are not in the repo: they come from the encrypted
+      # repository secrets (Settings › Secrets and variables › Actions).
+      # Without them the app still builds, but the Account page is not connected.
+      - name: Supabase settings
+        env:
+          SUPABASE_PROJECT: ${{ secrets.SUPABASE_PROJECT }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: |
+          if [ -z "$SUPABASE_PROJECT" ] || [ -z "$SUPABASE_KEY" ]; then
+            echo "::warning::SUPABASE_PROJECT / SUPABASE_KEY secrets missing: the app will not be connected to the database"
+          else
+            printf 'SUPABASE_PROJECT = %s\nSUPABASE_KEY = %s\n' "$SUPABASE_PROJECT" "$SUPABASE_KEY" > Config/Secrets.xcconfig
+          fi
+
       # Compiler errors are also reported as annotations: those are readable without signing in.
       - name: Build
         run: |

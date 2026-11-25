@@ -18,6 +18,10 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>SupabaseKey</key>
+	<string>$(SUPABASE_KEY)</string>
+	<key>SupabaseProject</key>
+	<string>$(SUPABASE_PROJECT)</string>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 </dict>

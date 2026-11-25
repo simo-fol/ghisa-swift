@@ -2,14 +2,25 @@ import Foundation
 import Observation
 import Supabase
 
-/// Where the online database lives (Supabase › Project Settings › API).
-/// The publishable ("anon") key can stay inside the app: the database rules (RLS)
-/// decide what each user may read or write. Never put the secret/service_role key here.
+/// Where the online database lives. The values are not in the code: they come from
+/// Config/Secrets.xcconfig (not in git) through Info.plist, so they never end up on GitHub.
+/// Only the publishable key goes there: the database rules (RLS) decide what each user may
+/// read or write. Never use the secret key in the app.
 enum SupabaseConfig {
-    static let url = "https://YOUR-PROJECT.supabase.co"
-    static let key = "YOUR-PUBLISHABLE-KEY"
+    private static func value(_ name: String) -> String {
+        (Bundle.main.object(forInfoDictionaryKey: name) as? String ?? "").trimmingCharacters(in: .whitespaces)
+    }
 
-    static var isSet: Bool { !url.contains("YOUR-PROJECT") && !key.hasPrefix("YOUR-") }
+    /// The id before .supabase.co, e.g. "abcdefghijkl".
+    static let project = value("SupabaseProject")
+    static let key = value("SupabaseKey")
+    static var url: URL? { project.isEmpty ? nil : URL(string: "https://\(project).supabase.co") }
+
+    /// False with the placeholders of Secrets.example.xcconfig, and refuses a secret key by mistake.
+    static var isSet: Bool {
+        url != nil && project != "your-project-id" && !key.isEmpty
+            && !key.hasPrefix("sb_secret_") && key != "sb_publishable_your-key"
+    }
 }
 
 /// The signed-in account and the online database: login, logout and who you are in each gym.
@@ -29,7 +40,7 @@ final class Cloud {
 
     /// `preview: true` never connects (Xcode Canvas).
     init(preview: Bool = false) {
-        guard !preview, SupabaseConfig.isSet, let url = URL(string: SupabaseConfig.url) else {
+        guard !preview, SupabaseConfig.isSet, let url = SupabaseConfig.url else {
             client = nil
             return
         }
@@ -96,7 +107,7 @@ final class Cloud {
     private static func message(_ error: Error) -> String {
         if let url = error as? URLError {
             return [.cannotFindHost, .badURL, .unsupportedURL].contains(url.code)
-                ? "Database non trovato: controlla l'URL in SupabaseConfig."
+                ? "Database non trovato: controlla SUPABASE_PROJECT in Config/Secrets.xcconfig."
                 : "Nessuna connessione a internet."
         }
         let text = error.localizedDescription

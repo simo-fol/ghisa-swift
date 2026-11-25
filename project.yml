@@ -26,6 +26,9 @@ targets:
     dependencies:
       - package: Supabase
         product: Supabase
+    configFiles:
+      Debug: Config/Base.xcconfig
+      Release: Config/Base.xcconfig
     info:
       path: Ghisa/Info.plist
       properties:
@@ -33,6 +36,9 @@ targets:
         UIFileSharingEnabled: true
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        # Online database, filled in from Config/Secrets.xcconfig at build time.
+        SupabaseProject: $(SUPABASE_PROJECT)
+        SupabaseKey: $(SUPABASE_KEY)
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.simone.ghisa
